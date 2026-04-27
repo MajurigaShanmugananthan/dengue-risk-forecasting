@@ -7,13 +7,14 @@ __pycache__/
 # Flutter / Dart
 build/
 .dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
+.packages
+.pub-cache/
 
 # Android / iOS
 android/.gradle/
 android/local.properties
 ios/Pods/
+android/app/build/
 
 # OS
 .DS_Store
@@ -22,4 +23,15 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# temp files
+.tmp.driveupload/
+
+# docs heavy files
+*.png
+*.jpg
+*.webm
+
+# Data
+*.csv
 
