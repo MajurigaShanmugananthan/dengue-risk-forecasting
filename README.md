@@ -65,7 +65,8 @@ This project aims to help users identify dengue risk levels in their area using 
 ## 📱 App Screens
 
 Example:
-![Home Screen](screenshots/home.png)
+![Home Screen]<img width="1080" height="2340" alt="Screenshot_1777293112" src="https://github.com/user-attachments/assets/45285990-1087-4e05-8dce-0828d8e46fe9" />
+
 
 ---
 
@@ -74,8 +75,16 @@ Example:
 ### Backend
 
 ```bash
-cd backend
-python -m venv venv
+cd E:\dengue_project\backend
 venv\Scripts\activate
-pip install -r requirements.txt
 python -m app.main
+
+### Flutter App
+
+```bash
+cd E:\dengue_project\flutter_app
+flutter clean
+flutter pub get
+flutter run
+
+
