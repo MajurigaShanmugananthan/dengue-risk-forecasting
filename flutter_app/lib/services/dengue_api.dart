@@ -6,17 +6,27 @@ class ApiService {
 
   static Future<Map<String, dynamic>> predictRisk(
       Map<String, dynamic> payload) async {
+    try {
+      final response = await http
+          .post(
+            Uri.parse("$baseUrl/predict"),
+            headers: {"Content-Type": "application/json"},
+            body: jsonEncode(payload),
+          )
+          .timeout(const Duration(seconds: 10));
 
-    final response = await http.post(
-      Uri.parse("$baseUrl/predict"),
-      headers: {"Content-Type": "application/json"},
-      body: jsonEncode(payload),
-    );
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body);
 
-    if (response.statusCode == 200) {
-      return jsonDecode(response.body);
-    } else {
-      throw Exception("Failed to predict risk");
+        print("API Response: $data"); // ✅ Debug
+
+        return data;
+      } else {
+        throw Exception(
+            "Server error: ${response.statusCode} - ${response.body}");
+      }
+    } catch (e) {
+      throw Exception("API Error: $e");
     }
   }
 }

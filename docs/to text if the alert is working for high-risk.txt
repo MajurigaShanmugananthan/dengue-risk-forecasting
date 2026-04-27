@@ -1,0 +1,52 @@
+✅ 1. QUICK TEST (Best for now) – Force High Risk
+
+Modify your _basePayload() in main.dart to simulate a dangerous situation.
+
+🔥 Replace with this temporarily:
+Map<String, dynamic> _basePayload() => {
+  "tavg": 32.0,          // high temp
+  "tmin": 27.0,
+  "tmax": 35.0,
+  "prcp": 50.0,          // heavy rain
+  "wspd": 1.0,
+
+  "Latitude": mapLocation.latitude,
+  "Longitude": mapLocation.longitude,
+
+  "Dengue_Cases_lag_1": 50,   // VERY HIGH
+  "prcp_lag_1": 40.0,
+  "tavg_lag_1": 31.0,
+
+  "Dengue_Cases_lag_2": 45,
+  "prcp_lag_2": 35.0,
+  "tavg_lag_2": 30.5,
+
+  "Dengue_Cases_lag_3": 40,
+  "prcp_lag_3": 30.0,
+  "tavg_lag_3": 30.0,
+
+  "Dengue_Cases_lag_4": 35,
+  "prcp_lag_4": 25.0,
+  "tavg_lag_4": 29.5
+};
+✅ Result:
+You should see:
+🔴 HIGH RISK
+🚨 Alert dialog
+Explanations like:
+“Heavy rainfall increased risk”
+“Recent dengue cases increased risk”
+✅ 2. MEDIUM RISK TEST
+
+Use moderate values:
+
+"Dengue_Cases_lag_1": 15,
+"prcp": 20,
+"tavg": 29,
+✅ 3. LOW RISK TEST
+
+Use safe values:
+
+"Dengue_Cases_lag_1": 1,
+"prcp": 0,
+"tavg": 25,
