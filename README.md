@@ -64,8 +64,6 @@ This project aims to help users identify dengue risk levels in their area using 
 
 ## 📱 App Screens
 
-(Add your screenshots here)
-
 Example:
 ![Home Screen](screenshots/home.png)
 
