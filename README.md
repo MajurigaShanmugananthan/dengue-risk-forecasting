@@ -65,7 +65,7 @@ This project aims to help users identify dengue risk levels in their area using 
 ## 📱 App Screens
 
 Example:
-![Home Screen]<img width="1080" height="2340" alt="Screenshot_1777293112" src="https://github.com/user-attachments/assets/45285990-1087-4e05-8dce-0828d8e46fe9" />
+![Home Screen]<img width="270" height="585" alt="Screenshot_1777293112" src="https://github.com/user-attachments/assets/45285990-1087-4e05-8dce-0828d8e46fe9" />
 
 
 ---
